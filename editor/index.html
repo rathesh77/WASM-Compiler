@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDE WEB</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic' rel='stylesheet'
+        type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">ALGO COMPILER</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><button  class="btn waves-effect waves-light submit"><a href="contact.html">Contact</a></button></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="input-field col s6">
+            <input value="Nouveau_document.algo" id="name_doc" type="text" class="active">
+            <label class="active" for="name_doc">Nom du document</label>
+        </div>
+        <div class="col s6" style="text-align: right;">
+            <div class="transparent-font" id="mots">Mots : </div>
+            <div class="transparent-font" id="lettres">Lettres : </div>
+        </div>
+    </div>
+
+    <div class="wrapper flex-row">
+        <div class="wrapper flex-col">
+            <div class="title" style="margin-left: 50px;"> Editeur de code algo</div>
+            <div class="wrapper flex-row">
+                <div class="line-counter transparent-font" id="tex"></div>
+                <textarea class="text-area" id="editor-algo" target='tex' spellcheck="false" autocapitalize="false" autocomplete="false"></textarea>
+            </div>
+            
+            <div>
+                <div style="position: absolute; left: 3%">
+                    <button id='save-code' class="btn waves-effect waves-light submit" type="submit" name="action">Save
+                        <i class="material-icons right">save</i>
+                    </button>
+
+                    <button id='run-code' class="btn waves-effect waves-light submit" type="submit" name="action">Run
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+
+            </br>
+
+                <form action="#" style="position: absolute; left: 3%">
+                    <div class="file-field input-field">
+                        <div class="btn">
+                            <span>Load File</span>
+                            <i class="material-icons right">autorenew</i>
+                            <input type="file" id="fileToLoad">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                        </div>
+                  </div>
+                </form>
+
+            </div>
+        </br></br></br></br>
+
+        <div id="result">
+            <div class="title"> Resultat de la compilation</div>
+                <span class="compilation"> > </span>
+            </div>
+        </div>
+
+        <div class="wrapper flex-col">
+            <div class="title">Compiled JS</div>
+            <textarea disabled class="text-area" id="editor-c" target='tex' spellcheck="false" autocapitalize="false" autocomplete="false"></textarea>
+            <div>
+                <button id='save2-code' class="btn waves-effect waves-light submit" type="submit" name="action">Save
+                    <i class="material-icons right">save</i>
+                </button>
+
+        
+            </div>
+        </div>
+
+    </div>
+    <script src="../utils/compiler.js"></script>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/lexer.js"></script>
+    <script src="./js/save.js"></script>
+    <script src="./js/load.js"></script>
+
+</body>
+
+</html>

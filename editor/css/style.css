@@ -1,0 +1,87 @@
+body {
+  font-family: source sans pro, helvetica neue, Helvetica, Arial, sans-serif;
+}
+
+.text-area {
+  font-family: Consolas, "Courier New", monospace;
+  resize: none;
+  font-size: 15px;
+  max-height: 500px;
+  min-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 5px;
+  line-height: 25.5px;
+  border: 0.1px solid silver;
+}
+.text-area:focus {
+  border-color: black;
+  white-space: pre;
+}
+.line-counter {
+  font-size: 17px;
+  background-color: #f5f7fa;
+  min-width: 50px;
+  text-align: center;
+  max-height: 500px;
+  min-height: 500px;
+  overflow: hidden;
+  font-family: Consolas, "Courier New", monospace;
+}
+.transparent-font {
+  color: #a5afc7;
+}
+.wrapper {
+  display: flex;
+  flex: 1;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+
+nav {
+  background-color: #373d49 !important;
+  margin-bottom: 50px;
+  padding: 0 10px 0 10px;
+  letter-spacing: 2px;
+}
+
+.input-field input[type="text"]:focus {
+  border-bottom: 1px solid #000 !important;
+  box-shadow: 0 1px 0 0 #000 !important;
+}
+
+/* label color */
+.input-field label {
+  color: #000 !important;
+}
+/* label focus color */
+.input-field input[type="text"]:focus + label {
+  color: #000 !important;
+}
+
+div.title {
+  border: 1px solid silver;
+  border-collapse: collapse;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.btn {
+  background-color: #373d49 !important;
+}
+.submit {
+  align-self: flex-end;
+}
+div#result {
+  border: 1px solid silver;
+  min-height: 120px;
+  margin-left: 50px;
+}
+
+span.compilation {
+  padding-left: 5px;
+}
